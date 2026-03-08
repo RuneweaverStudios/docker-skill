@@ -1,0 +1,6 @@
+{
+  "docker_path": "docker",
+  "default_format": "table",
+  "timeout_seconds": 30,
+  "show_all_containers": false
+}
