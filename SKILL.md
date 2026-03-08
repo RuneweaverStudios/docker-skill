@@ -1,7 +1,8 @@
 ---
 name: docker
 displayName: Docker
-description: Installs and uses Docker reliably with official docs. Use when installing Docker (Desktop or Engine), building or running containers, writing Dockerfiles, using docker compose, or when the user asks about containers, images, or Docker CLI.
+version: 1.1.0
+description: Docker reference and helper utilities. Check daemon status, list containers, show running services, and access comprehensive Docker CLI/Dockerfile documentation.
 homepage: https://docs.docker.com/
 metadata: {"openclaw": {"requires": {"anyBins": ["docker"]}, "install": {"brew": "docker"}, "primaryEnv": null}}
 ---
@@ -160,6 +161,23 @@ docker run -d -p 127.0.0.1:3000:3000 getting-started
 ## Volume mounts
 
 When using `-v HOST:CONTAINER`, use **stable host paths** (e.g. a directory under the project or skill root). Avoid temporary directories (e.g. from `mktemp`); they may not mount reliably in some environments (sandboxes, CI, remote Docker). See [LEARNINGS.md](LEARNINGS.md).
+
+## Helper Script
+
+The `scripts/docker_helper.py` script provides quick access to common Docker operations:
+
+```bash
+# Check Docker daemon status
+python3 scripts/docker_helper.py status [--json]
+
+# List containers (add -a for all, including stopped)
+python3 scripts/docker_helper.py list [-a] [--json]
+
+# Show running services with exposed ports
+python3 scripts/docker_helper.py services [--json]
+```
+
+All commands support `--json` for machine-readable output, suitable for orchestration and automated monitoring.
 
 ## Additional Resources
 

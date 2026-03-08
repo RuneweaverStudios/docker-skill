@@ -1,16 +1,19 @@
 {
   "schema": "openclaw.skill.v1",
   "name": "docker-skill",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "displayName": "Docker",
-  "description": "Reference-only skill (no executable scripts). Installs and uses Docker reliably with official docs. Use when installing Docker (Desktop or Engine), building or running containers, writing Dockerfiles, using docker compose, or when the user asks about containers, images, or Docker CLI.",
+  "description": "Docker reference and helper utilities. Check daemon status, list containers, show running services, and access comprehensive Docker CLI/Dockerfile documentation.",
   "author": "RuneweaverStudios",
   "tags": [
     "docker",
     "containerization",
     "devops",
     "deployment",
+    "containers",
     "reference"
   ],
-  "platform": "openclaw"
+  "platform": "openclaw",
+  "main": "scripts/docker_helper.py",
+  "license": "MIT"
 }
