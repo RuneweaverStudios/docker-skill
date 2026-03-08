@@ -5,6 +5,12 @@
   "displayName": "Docker",
   "description": "Installs and uses Docker reliably with official docs. Use when installing Docker (Desktop or Engine), building or running containers, writing Dockerfiles, using docker compose, or when the user asks about containers, images, or Docker CLI.",
   "author": "RuneweaverStudios",
-  "tags": [],
+  "tags": [
+    "docker",
+    "containerization",
+    "devops",
+    "deployment",
+    "reference"
+  ],
   "platform": "openclaw"
 }
